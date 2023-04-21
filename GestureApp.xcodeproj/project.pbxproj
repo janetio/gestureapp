@@ -14,6 +14,8 @@
 		9D01DF2129F1B0B000D7067B /* GestureAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF2029F1B0B000D7067B /* GestureAppTests.swift */; };
 		9D01DF2B29F1B0B000D7067B /* GestureAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF2A29F1B0B000D7067B /* GestureAppUITests.swift */; };
 		9D01DF2D29F1B0B000D7067B /* GestureAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF2C29F1B0B000D7067B /* GestureAppUITestsLaunchTests.swift */; };
+		9D01DF3A29F2577100D7067B /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF3929F2577100D7067B /* PageModel.swift */; };
+		9D01DF3C29F258B100D7067B /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF3B29F258B100D7067B /* PageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		9D01DF2629F1B0B000D7067B /* GestureAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestureAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D01DF2A29F1B0B000D7067B /* GestureAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureAppUITests.swift; sourceTree = "<group>"; };
 		9D01DF2C29F1B0B000D7067B /* GestureAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9D01DF3929F2577100D7067B /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
+		9D01DF3B29F258B100D7067B /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +101,8 @@
 				9D01DF0F29F1B0AE00D7067B /* GestureAppApp.swift */,
 				9D01DF1129F1B0AE00D7067B /* ContentView.swift */,
 				9D01DF1329F1B0B000D7067B /* Assets.xcassets */,
+				9D01DF3B29F258B100D7067B /* PageView.swift */,
+				9D01DF3929F2577100D7067B /* PageModel.swift */,
 				9D01DF1529F1B0B000D7067B /* Preview Content */,
 			);
 			path = GestureApp;
@@ -258,6 +264,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D01DF1229F1B0AE00D7067B /* ContentView.swift in Sources */,
+				9D01DF3C29F258B100D7067B /* PageView.swift in Sources */,
+				9D01DF3A29F2577100D7067B /* PageModel.swift in Sources */,
 				9D01DF1029F1B0AE00D7067B /* GestureAppApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
