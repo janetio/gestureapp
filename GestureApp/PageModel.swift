@@ -14,11 +14,11 @@ struct Page: Identifiable, Equatable {
     var imageUrl: String
     var tag: Int
     
-    static var samplePage = Page(name: "Title Exzmple", description: "example meow", imageUrl: "first", tag: 0)
+    static var samplePage = Page(name: "Title Example", description: "example", imageUrl: "first", tag: 0)
     
     static var samplePages: [Page] = [
-    Page(name: "welcome", description: "best app", imageUrl: "first", tag: 0),
-    Page(name: "welcome", description: "sec", imageUrl: "sec", tag: 1),
-    Page(name: "welcome", description: "third app", imageUrl: "third", tag: 2)
+    Page(name: "Welcome to Gesture Signaller. This app will allow you to transform gestures into words.", description: "", imageUrl: "first", tag: 0),
+    Page(name: "To perform gestures, please press the button indicated above when running while performing the gesture.", description: "", imageUrl: "sec", tag: 1),
+    Page(name: "After performing gesture, corresponding sound will be made.", description: "", imageUrl: "third", tag: 2)
     ]
 }

@@ -54,9 +54,11 @@ struct Tutorial: View {
                         if page == pages.last {
                             Button("Let's go!", action:{ self.finishedTutorial = true})
                                 .buttonStyle(.bordered)
+                                .offset(x:0, y:-70)
                         } else {
                             Button("next", action:
                                 incrementPage)
+                            .offset(x:0, y:-90)
                         }
                     }
                     .tag(page.tag)
