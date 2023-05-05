@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		573EC9502A05928500203571 /* testmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 573EC94F2A05928500203571 /* testmodel.mlmodel */; };
 		9D01DF1029F1B0AE00D7067B /* GestureAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF0F29F1B0AE00D7067B /* GestureAppApp.swift */; };
 		9D01DF1229F1B0AE00D7067B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D01DF1129F1B0AE00D7067B /* ContentView.swift */; };
 		9D01DF1429F1B0B000D7067B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9D01DF1329F1B0B000D7067B /* Assets.xcassets */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		573EC94F2A05928500203571 /* testmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = testmodel.mlmodel; sourceTree = "<group>"; };
 		9D01DF0C29F1B0AE00D7067B /* GestureApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestureApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D01DF0F29F1B0AE00D7067B /* GestureAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestureAppApp.swift; sourceTree = "<group>"; };
 		9D01DF1129F1B0AE00D7067B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		572DA19B29F4E15F00A74804 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				573EC94F2A05928500203571 /* testmodel.mlmodel */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9D01DF0329F1B0AE00D7067B = {
 			isa = PBXGroup;
 			children = (
@@ -82,6 +92,7 @@
 				9D01DF1F29F1B0B000D7067B /* GestureAppTests */,
 				9D01DF2929F1B0B000D7067B /* GestureAppUITests */,
 				9D01DF0D29F1B0AE00D7067B /* Products */,
+				572DA19B29F4E15F00A74804 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -263,6 +274,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				573EC9502A05928500203571 /* testmodel.mlmodel in Sources */,
 				9D01DF1229F1B0AE00D7067B /* ContentView.swift in Sources */,
 				9D01DF3C29F258B100D7067B /* PageView.swift in Sources */,
 				9D01DF3A29F2577100D7067B /* PageModel.swift in Sources */,
