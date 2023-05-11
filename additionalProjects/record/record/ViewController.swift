@@ -21,6 +21,8 @@ class ViewController: UIViewController {
     //Definition in viewDidLoad()
     var stateInMultiArray : MLMultiArray?
     
+    var stateInZeroes : [Double] = []
+    
     var attitudeX: [Double] = []
     var attitudeY: [Double] = []
     var attitudeZ: [Double] = []
@@ -46,11 +48,37 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        for _ in 0...(stateInLength - 1) {
+            stateInZeroes.append(0.0)
+        }
+        
+        stateInMultiArray = try? MLMultiArray(stateInZeroes)
+        
         startSensorUpdates()
-        stateInMultiArray = try? MLMultiArray(shape: [stateInLength as NSNumber], dataType: MLMultiArrayDataType.double)
     }
     
     @IBOutlet weak var console: UILabel!
+    
+    func resetMotionArrays(){
+        attitudeX = []
+        attitudeY = []
+        attitudeZ = []
+        
+        gyroX = []
+        gyroY = []
+        gyroZ = []
+        
+        accX = []
+        accY = []
+        accZ = []
+        
+        gravityX = []
+        gravityY = []
+        gravityZ = []
+        
+        stateInMultiArray = try? MLMultiArray(stateInZeroes)
+    }
     
     @IBAction func recordCsvAction(sender: UIButton) {
             if isRecording {
@@ -59,10 +87,10 @@ class ViewController: UIViewController {
                 var label = predict()
                 
                 if (label == nil){
-                    label = " | Label is nil"
+                    label = "label is nil\n"
                 }
                 
-                console.text! += label!
+                console.text! += label! + "\n"
                 
                 
                 //showSaveCsvFileAlert(fileName: String(count))
@@ -71,6 +99,7 @@ class ViewController: UIViewController {
                 sender.setTitle("START", for: .normal)
             }else{
                 startRecording()
+                resetMotionArrays()
                 sender.setTitle("STOP", for: .normal)
             }
         }
@@ -87,7 +116,7 @@ class ViewController: UIViewController {
     }
     
     func startSensorUpdates() {
-        motionManager.deviceMotionUpdateInterval = 0.1
+        motionManager.deviceMotionUpdateInterval = 0.0000000001
             
             // start sensor updates
         motionManager.startDeviceMotionUpdates(to: OperationQueue.current!, withHandler: {(motion:CMDeviceMotion?, error:Error?) in
@@ -127,14 +156,23 @@ class ViewController: UIViewController {
         
         let length = accX.count
         
+        print("Length")
+        print(length)
+        print("")
+        
+        //print("accX")
+        //print(accX)
+        //print("")
+        
         if(length < predictionWindow){
             // Too short of a gesture
-            return "Try doing the gesture for longer"
+            return "Try doing the gesture for longer\n"
         }
         
         //The math here could be better i think, but it works ('shares' the trimming from the front and back of the data
         var numOfLoops = length / predictionWindow
         var start = (length % predictionWindow) / 2
+        let orgStart = start
         
         var prediction : String?
         
@@ -154,33 +192,45 @@ class ViewController: UIViewController {
         var gyroYMultiArray : MLMultiArray?
         var gyroZMultiArray : MLMultiArray?
         
+//        print(numOfLoops)
+//        print(start)
+//        print("starting for loop")
+                
         for i in 1...numOfLoops{
             
-            accXMultiArray = try? MLMultiArray(accX[start ... start + (i * predictionWindow) - 1])
-            accYMultiArray = try? MLMultiArray(accY[start ... start + (i * predictionWindow) - 1])
-            accZMultiArray = try? MLMultiArray(accZ[start ... start + (i * predictionWindow) - 1])
+//            print("start:")
+//            print(start)
+//            print("")
+//            print("start + (i * predictionWindow) - 1 : ")
+//            print(start + (i * predictionWindow) - 1)
             
-            attitudeXMultiArray = try? MLMultiArray(attitudeX[start ... start + (i * predictionWindow) - 1])
-            attitudeYMultiArray = try? MLMultiArray(attitudeY[start ... start + (i * predictionWindow) - 1])
-            attitudeZMultiArray = try? MLMultiArray(attitudeZ[start ... start + (i * predictionWindow) - 1])
+            accXMultiArray = try? MLMultiArray(accX[start ... orgStart + (i * predictionWindow) - 1])
+           accYMultiArray = try? MLMultiArray(accY[start ... orgStart + (i * predictionWindow) - 1])
+           accZMultiArray = try? MLMultiArray(accZ[start ... orgStart + (i * predictionWindow) - 1])
+           
+           attitudeXMultiArray = try? MLMultiArray(attitudeX[start ... orgStart + (i * predictionWindow) - 1])
+           attitudeYMultiArray = try? MLMultiArray(attitudeY[start ... orgStart + (i * predictionWindow) - 1])
+           attitudeZMultiArray = try? MLMultiArray(attitudeZ[start ... orgStart + (i * predictionWindow) - 1])
 
-            gravityXMultiArray = try? MLMultiArray(gravityX[start ... start + (i * predictionWindow) - 1])
-            gravityYMultiArray = try? MLMultiArray(gravityY[start ... start + (i * predictionWindow) - 1])
-            gravityZMultiArray = try? MLMultiArray(gravityZ[start ... start + (i * predictionWindow) - 1])
+           gravityXMultiArray = try? MLMultiArray(gravityX[start ... orgStart + (i * predictionWindow) - 1])
+           gravityYMultiArray = try? MLMultiArray(gravityY[start ... orgStart + (i * predictionWindow) - 1])
+           gravityZMultiArray = try? MLMultiArray(gravityZ[start ... orgStart + (i * predictionWindow) - 1])
+           
+           gyroXMultiArray = try? MLMultiArray(gyroX[start ... orgStart + (i * predictionWindow) - 1])
+           gyroYMultiArray = try? MLMultiArray(gyroY[start ... orgStart + (i * predictionWindow) - 1])
+           gyroZMultiArray = try? MLMultiArray(gyroZ[start ... orgStart + (i * predictionWindow) - 1])
             
-            gyroXMultiArray = try? MLMultiArray(gyroX[start ... start + (i * predictionWindow) - 1])
-            gyroYMultiArray = try? MLMultiArray(gyroY[start ... start + (i * predictionWindow) - 1])
-            gyroZMultiArray = try? MLMultiArray(gyroZ[start ... start + (i * predictionWindow) - 1])
-            
-            var modelPrediction = try? classifier?.prediction(accX: accXMultiArray!, accY: accYMultiArray!, attitudeX: attitudeXMultiArray!, attitudeY: attitudeYMultiArray!, attitudeZ: attitudeZMultiArray!, gravityX: gravityXMultiArray!, gravityY: gravityYMultiArray!, gravityZ: gravityZMultiArray!, gyroX: gyroXMultiArray!, gyroY: gyroYMultiArray!, gyroZ: gyroZMultiArray!, stateIn: stateInMultiArray!)
+            let modelPrediction = try? classifier?.prediction(accX: accXMultiArray!, accY: accYMultiArray!, attitudeX: attitudeXMultiArray!, attitudeY: attitudeYMultiArray!, attitudeZ: attitudeZMultiArray!, gravityX: gravityXMultiArray!, gravityY: gravityYMultiArray!, gravityZ: gravityZMultiArray!, gyroX: gyroXMultiArray!, gyroY: gyroYMultiArray!, gyroZ: gyroZMultiArray!, stateIn: stateInMultiArray!)
             
             if(modelPrediction == nil){
-                console.text! += " modelPrediction is nil "
-                return "FAILED: modelPrediction is nil"
+                return "FAILED: modelPrediction is nil\n"
             }
             
             stateInMultiArray = modelPrediction?.stateOut
+            
             prediction = modelPrediction?.label
+            
+            print(modelPrediction?.labelProbability)
             
             start += 100
         }
