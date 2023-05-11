@@ -14,7 +14,7 @@
 		31ABE28D29F765ED009457ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ABE28C29F765ED009457ED /* Assets.xcassets */; };
 		31ABE29029F765ED009457ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ABE28E29F765ED009457ED /* LaunchScreen.storyboard */; };
 		31ABE2BA29F83448009457ED /* button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABE2B929F83448009457ED /* button.swift */; };
-		576348DC2A0ACE5300BDE319 /* testmodel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 576348DB2A0ACE5300BDE319 /* testmodel.mlmodel */; };
+		57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +27,7 @@
 		31ABE28F29F765ED009457ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31ABE29129F765ED009457ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31ABE2B929F83448009457ED /* button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = button.swift; sourceTree = "<group>"; };
-		576348DB2A0ACE5300BDE319 /* testmodel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = testmodel.mlmodel; sourceTree = "<group>"; };
+		57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 1.mlmodel"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +68,7 @@
 				31ABE28C29F765ED009457ED /* Assets.xcassets */,
 				31ABE28E29F765ED009457ED /* LaunchScreen.storyboard */,
 				31ABE29129F765ED009457ED /* Info.plist */,
-				576348DB2A0ACE5300BDE319 /* testmodel.mlmodel */,
+				57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */,
 			);
 			path = record;
 			sourceTree = "<group>";
@@ -144,9 +144,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				576348DC2A0ACE5300BDE319 /* testmodel.mlmodel in Sources */,
 				31ABE28829F765EA009457ED /* ViewController.swift in Sources */,
 				31ABE28429F765EA009457ED /* AppDelegate.swift in Sources */,
+				57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */,
 				31ABE28629F765EA009457ED /* SceneDelegate.swift in Sources */,
 				31ABE2BA29F83448009457ED /* button.swift in Sources */,
 			);
