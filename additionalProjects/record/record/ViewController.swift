@@ -84,14 +84,9 @@ class ViewController: UIViewController {
             if isRecording {
                 stopRecording()
                 
-                var label = predict()
+                var result = predict()
                 
-                if (label == nil){
-                    label = "label is nil\n"
-                }
-                
-                console.text = "Predicted: " + label!
-                
+                console.text = "Predicted: " + result[0]! + "\n\nProbabilities:\n" + result[1]!
                 
                 //showSaveCsvFileAlert(fileName: String(count))
                 count = count + 1
@@ -148,7 +143,7 @@ class ViewController: UIViewController {
     
     
     
-    func predict() -> String? {
+    func predict() -> [String?] {
         
         if(classifier == nil){
             console.text! += " Classifier is nil "
@@ -162,7 +157,7 @@ class ViewController: UIViewController {
         
         if(length < predictionWindow){
             // Too short of a gesture
-            return "Try doing the gesture for longer\n"
+            return ["Try doing the gesture for longer\n",""]
         }
         
         //The math here could be better i think, but it works ('shares' the trimming from the front and back of the data
@@ -170,7 +165,8 @@ class ViewController: UIViewController {
         var start = (length % predictionWindow) / 2
         let orgStart = start
         
-        var prediction : String?
+        var prediction : String? = ""
+        var predictionLabel : String? = ""
         
         var accXMultiArray : MLMultiArray?
         var accYMultiArray : MLMultiArray?
@@ -209,19 +205,25 @@ class ViewController: UIViewController {
             let modelPrediction = try? classifier?.prediction(accX: accXMultiArray!, accY: accYMultiArray!, accZ: accZMultiArray!, attitudeX: attitudeXMultiArray!, attitudeY: attitudeYMultiArray!, attitudeZ: attitudeZMultiArray!, gravityX: gravityXMultiArray!, gravityY: gravityYMultiArray!, gravityZ: gravityZMultiArray!, gyroX: gyroXMultiArray!, gyroY: gyroYMultiArray!, gyroZ: gyroZMultiArray!, stateIn: stateInMultiArray!)
             
             if(modelPrediction == nil){
-                return "FAILED: modelPrediction is nil\n"
+                return ["FAILED: modelPrediction is nil\n",""]
             }
             
             stateInMultiArray = modelPrediction?.stateOut
             
             prediction = modelPrediction?.label
             
-            print(modelPrediction?.labelProbability)
+            let maxProb = modelPrediction?.labelProbability.max {a,b in a.value < b.value}
+            
+            if(maxProb!.value < 0.98){
+                prediction = "Other"
+            }
+                
+            predictionLabel = modelPrediction?.labelProbability.description
             
             start += 100
         }
         
-        return prediction
+        return [prediction, predictionLabel]
     }
     
     func saveSensorDataToCsv(fileName:String) {
