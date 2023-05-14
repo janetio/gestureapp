@@ -10,6 +10,7 @@ import CoreMotion
 import simd
 import TabularData
 import CoreML
+import SwiftUI
 
 class ViewController: UIViewController {
     
@@ -78,6 +79,14 @@ class ViewController: UIViewController {
         gravityZ = []
         
         stateInMultiArray = try? MLMultiArray(stateInZeroes)
+    }
+    
+    @IBAction func tutorialPressed(_ sender: UIButton) {
+        
+        let tutorial = Tutorial()
+        let host = UIHostingController(rootView: tutorial)
+        self.present(host, animated: true)
+
     }
     
     @IBAction func recordCsvAction(sender: UIButton) {
