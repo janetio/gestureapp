@@ -13,6 +13,11 @@ import CoreML
 import SwiftUI
 import AVFoundation
 
+struct Gestures {
+    static var upDown = "updown"
+    static var wave = "wave"
+}
+
 class ViewController: UIViewController {
     
     var classifier = try? MyActivityClassifier_1(configuration: MLModelConfiguration())
@@ -90,13 +95,21 @@ class ViewController: UIViewController {
         
     }
     
+    @IBAction func editGestures(_ sender: UIButton) {
+        
+        let edit = EditGestures()
+        let host = UIHostingController(rootView: edit)
+        self.present(host, animated: true)
+        
+    }
+    
     @IBAction func recordCsvAction(sender: UIButton) {
             if isRecording {
                 stopRecording()
                 
                 let result = predict()
                 
-                let utterance = AVSpeechUtterance(string: "Hello Swift.")
+                let utterance = AVSpeechUtterance(string: Gestures.upDown)
                 utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
                 utterance.rate = 0.5
                 

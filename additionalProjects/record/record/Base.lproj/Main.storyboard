@@ -41,6 +41,15 @@
                                     <action selector="tutorialPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lyu-zq-JWl"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f9x-vY-bBj">
+                                <rect key="frame" x="30" y="60" width="127" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Edit Gestures"/>
+                                <connections>
+                                    <action selector="editGestures:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AOQ-AC-bLk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

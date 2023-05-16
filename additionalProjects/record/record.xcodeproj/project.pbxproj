@@ -19,6 +19,7 @@
 		9D9F8D052A11A54600B797E6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D042A11A54600B797E6 /* PageView.swift */; };
 		9D9F8D072A11A55200B797E6 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D062A11A55200B797E6 /* PageModel.swift */; };
 		9D9F8D092A11A57200B797E6 /* test.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 9D9F8D082A11A57200B797E6 /* test.mp3 */; };
+		9D9F8D0C2A1332CB00B797E6 /* EditGestures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D0A2A13301E00B797E6 /* EditGestures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		9D9F8D042A11A54600B797E6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		9D9F8D062A11A55200B797E6 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
 		9D9F8D082A11A57200B797E6 /* test.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = test.mp3; sourceTree = "<group>"; };
+		9D9F8D0A2A13301E00B797E6 /* EditGestures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditGestures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				31ABE28529F765EA009457ED /* SceneDelegate.swift */,
 				31ABE28729F765EA009457ED /* ViewController.swift */,
 				9D9F8D022A11A50800B797E6 /* tutorial.swift */,
+				9D9F8D0A2A13301E00B797E6 /* EditGestures.swift */,
 				9D9F8D042A11A54600B797E6 /* PageView.swift */,
 				9D9F8D062A11A55200B797E6 /* PageModel.swift */,
 				31ABE2B929F83448009457ED /* button.swift */,
@@ -158,6 +161,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D9F8D072A11A55200B797E6 /* PageModel.swift in Sources */,
+				9D9F8D0C2A1332CB00B797E6 /* EditGestures.swift in Sources */,
 				31ABE28829F765EA009457ED /* ViewController.swift in Sources */,
 				31ABE28429F765EA009457ED /* AppDelegate.swift in Sources */,
 				57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */,
