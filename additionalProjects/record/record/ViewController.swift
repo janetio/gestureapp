@@ -14,11 +14,13 @@ import SwiftUI
 import AVFoundation
 
 struct Gestures {
-    static var upDown = "updown"
-    static var wave = "wave"
+    static var upDown = "updown updown updown"
+    static var wave = "wave wave wave"
 }
 
 class ViewController: UIViewController {
+    
+    let synthesizer = AVSpeechSynthesizer()
     
     var classifier = try? MyActivityClassifier_1(configuration: MLModelConfiguration())
     
@@ -111,8 +113,13 @@ class ViewController: UIViewController {
                 
                 if result[0] == "UpDown" {
                     speak(input: Gestures.upDown)
-                } else {
+                }
+                if result[0] == "Wave"
+                {
                     speak(input: Gestures.wave)
+                }
+                if result[0] == "Other" {
+                    speak(input: "Other other other")
                 }
                 
                 console.text = "Predicted: " + result[0]! + "\n\nProbabilities:\n" + result[1]!
@@ -144,14 +151,17 @@ class ViewController: UIViewController {
     func speak(input: String) {
         
         var input_mod = ""
-        for _ in 0...5 {
-            input_mod += input + " "
-        }
-        let utterance = AVSpeechUtterance(string: input_mod)
+        input_mod += input
+        
+        print("input_mod: ")
+        print(input_mod)
+        print("")
+        
+        var utterance = AVSpeechUtterance(string: input_mod)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
         utterance.rate = 0.5
-        let synthesizer = AVSpeechSynthesizer()
-        synthesizer.speak(utterance)
+//        var synthesizer = AVSpeechSynthesizer()
+        self.synthesizer.speak(utterance)
         
     }
     

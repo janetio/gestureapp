@@ -38,8 +38,12 @@ struct EditGestures: View {
     }
     
     func change() {
-        Gestures.upDown = upDown
-        Gestures.wave = wave
+        if upDown.count > 0 {
+            Gestures.upDown = upDown
+        }
+        if wave.count > 0 {
+            Gestures.wave = wave
+        }
         self.changed = true
     }
 }
