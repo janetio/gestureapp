@@ -11,6 +11,7 @@ import simd
 import TabularData
 import CoreML
 import SwiftUI
+import AVFoundation
 
 class ViewController: UIViewController {
     
@@ -53,9 +54,9 @@ class ViewController: UIViewController {
         for _ in 0...(stateInLength - 1) {
             stateInZeroes.append(0.0)
         }
-        
+
         stateInMultiArray = try? MLMultiArray(stateInZeroes)
-        
+
         startSensorUpdates()
     }
     
@@ -86,14 +87,21 @@ class ViewController: UIViewController {
         let tutorial = Tutorial()
         let host = UIHostingController(rootView: tutorial)
         self.present(host, animated: true)
-
+        
     }
     
     @IBAction func recordCsvAction(sender: UIButton) {
             if isRecording {
                 stopRecording()
                 
-                var result = predict()
+                let result = predict()
+                
+                let utterance = AVSpeechUtterance(string: "Hello Swift.")
+                utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+                utterance.rate = 0.5
+                
+                let synthesizer = AVSpeechSynthesizer()
+                synthesizer.speak(utterance)
                 
                 console.text = "Predicted: " + result[0]! + "\n\nProbabilities:\n" + result[1]!
                 
@@ -101,7 +109,9 @@ class ViewController: UIViewController {
                 count = count + 1
                 
                 sender.setTitle("START", for: .normal)
-            }else{
+                
+            } else {
+                
                 startRecording()
                 resetMotionArrays()
                 sender.setTitle("STOP", for: .normal)
