@@ -108,13 +108,13 @@ class ViewController: UIViewController {
                 stopRecording()
                 
                 let result = predict()
-                
-                let utterance = AVSpeechUtterance(string: Gestures.upDown)
-                utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
-                utterance.rate = 0.5
-                
-                let synthesizer = AVSpeechSynthesizer()
-                synthesizer.speak(utterance)
+                if result[0] == "UpDown" {
+                    var utterance = AVSpeechUtterance(string: Gestures.upDown)
+                    speak(utterance: utterance)
+                } else {
+                    var utterance = AVSpeechUtterance(string: Gestures.wave)
+                    speak(utterance: utterance)
+                }
                 
                 console.text = "Predicted: " + result[0]! + "\n\nProbabilities:\n" + result[1]!
                 
@@ -140,6 +140,15 @@ class ViewController: UIViewController {
             recordText = ""
             recordText += headerText + "\n"
             isRecording = true
+    }
+    
+    func speak(utterance: AVSpeechUtterance) {
+//        @State var utterance: AVSpeechUtterance
+        utterance.voice = AVSpeechSynthesisVoice(language: "en-GB")
+        utterance.rate = 0.5
+        
+        let synthesizer = AVSpeechSynthesizer()
+        synthesizer.speak(utterance)
     }
     
     func startSensorUpdates() {
