@@ -22,10 +22,12 @@ class ViewController: UIViewController {
     
     let synthesizer = AVSpeechSynthesizer()
     
-    var classifier = try? MyActivityClassifier_1(configuration: MLModelConfiguration())
+    var classifier = try? Projectmodel_2_copy_7_Iteration_20(configuration: MLModelConfiguration())
     
     let stateInLength = 400
     let predictionWindow = 100
+    
+    let threshold = 0.75
     
     //Definition in viewDidLoad()
     var stateInMultiArray : MLMultiArray?
@@ -269,7 +271,7 @@ class ViewController: UIViewController {
             
             let maxProb = modelPrediction?.labelProbability.max {a,b in a.value < b.value}
             
-            if(maxProb!.value < 0.98){
+            if(maxProb!.value < threshold){
                 prediction = "Other"
             }
                 

@@ -14,6 +14,9 @@
 		31ABE28D29F765ED009457ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 31ABE28C29F765ED009457ED /* Assets.xcassets */; };
 		31ABE29029F765ED009457ED /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31ABE28E29F765ED009457ED /* LaunchScreen.storyboard */; };
 		31ABE2BA29F83448009457ED /* button.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31ABE2B929F83448009457ED /* button.swift */; };
+		57397C402A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */; };
+		57397C422A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C412A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel */; };
+		57397C442A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */; };
 		57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */; };
 		9D9F8D032A11A50800B797E6 /* tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D022A11A50800B797E6 /* tutorial.swift */; };
 		9D9F8D052A11A54600B797E6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D042A11A54600B797E6 /* PageView.swift */; };
@@ -32,6 +35,9 @@
 		31ABE28F29F765ED009457ED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		31ABE29129F765ED009457ED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31ABE2B929F83448009457ED /* button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = button.swift; sourceTree = "<group>"; };
+		57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "projectmodel 1 copy.mlmodel"; sourceTree = "<group>"; };
+		57397C412A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "projectmodel 2 copy 2.mlmodel"; sourceTree = "<group>"; };
+		57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Projectmodel 2 copy 7 Iteration 20.mlmodel"; sourceTree = "<group>"; };
 		57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		9D9F8D022A11A50800B797E6 /* tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial.swift; sourceTree = "<group>"; };
 		9D9F8D042A11A54600B797E6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
@@ -70,6 +76,7 @@
 		31ABE28229F765EA009457ED /* record */ = {
 			isa = PBXGroup;
 			children = (
+				57397C412A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel */,
 				31ABE28329F765EA009457ED /* AppDelegate.swift */,
 				31ABE28529F765EA009457ED /* SceneDelegate.swift */,
 				31ABE28729F765EA009457ED /* ViewController.swift */,
@@ -84,6 +91,8 @@
 				31ABE28E29F765ED009457ED /* LaunchScreen.storyboard */,
 				31ABE29129F765ED009457ED /* Info.plist */,
 				57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */,
+				57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */,
+				57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */,
 			);
 			path = record;
 			sourceTree = "<group>";
@@ -163,8 +172,11 @@
 				9D9F8D072A11A55200B797E6 /* PageModel.swift in Sources */,
 				9D9F8D0C2A1332CB00B797E6 /* EditGestures.swift in Sources */,
 				31ABE28829F765EA009457ED /* ViewController.swift in Sources */,
+				57397C442A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel in Sources */,
 				31ABE28429F765EA009457ED /* AppDelegate.swift in Sources */,
 				57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */,
+				57397C402A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel in Sources */,
+				57397C422A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel in Sources */,
 				9D9F8D032A11A50800B797E6 /* tutorial.swift in Sources */,
 				31ABE28629F765EA009457ED /* SceneDelegate.swift in Sources */,
 				31ABE2BA29F83448009457ED /* button.swift in Sources */,
@@ -329,7 +341,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gallom.record;
+				PRODUCT_BUNDLE_IDENTIFIER = gallom.recordx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -358,7 +370,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gallom.record;
+				PRODUCT_BUNDLE_IDENTIFIER = gallom.recordx;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
