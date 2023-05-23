@@ -24,7 +24,6 @@ struct Page: Identifiable, Equatable {
     Page(name: "After performing gesture, corresponding sound will be made.", description: "", imageUrl: "third", videoUrl: "",tag: 2),
     Page(name: "Wave Demo", description: "Please press on center of video to play", imageUrl: "", videoUrl: "wave",tag: 3),
     Page(name: "UpDown Demo", description: "Please press on center of video to play", imageUrl: "", videoUrl: "updown",tag: 4),
-    Page(name: "Punch Demo", description: "Please press on center of video to play", imageUrl: "", videoUrl: "punch",tag: 5),
-    Page(name: "Editing Gestures", description: "To edit gestures, please press edit gestures button on home page, enter new sound to be made, and press save changes.", imageUrl: "four", videoUrl: "punch",tag: 6),
+    Page(name: "Editing Gestures", description: "To edit gestures, please press edit gestures button on home page, enter new sound to be made, and press save changes.", imageUrl: "four", videoUrl: "punch",tag: 5),
     ]
 }

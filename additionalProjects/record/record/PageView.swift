@@ -13,10 +13,9 @@ struct PageView: View {
     var page: Page
     @State var wave = AVPlayer(url:  Bundle.main.url(forResource: "wave", withExtension: "mov")!)
     @State var updown = AVPlayer(url:  Bundle.main.url(forResource: "updown", withExtension: "mov")!)
-    @State var punch = AVPlayer(url:  Bundle.main.url(forResource: "punch", withExtension: "mov")!)
     var body: some View {
         VStack(spacing: 20) {
-            if page.tag <= 2 || page.tag == 6 {
+            if page.tag <= 2 || page.tag == 5 {
                 Image("\(page.imageUrl)")
                     .resizable()
                     .scaledToFit()
@@ -30,9 +29,6 @@ struct PageView: View {
             }
             if page.tag == 4 {
                 VideoPlayer(player: updown)
-            }
-            if page.tag == 5 {
-                VideoPlayer(player: punch)
             }
             Spacer()
             Spacer()
