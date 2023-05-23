@@ -1,5 +1,6 @@
 
 import SwiftUI
+import AVKit
 
 struct Tutorial: View {
     
@@ -7,37 +8,50 @@ struct Tutorial: View {
     private let pages: [Page] = Page.samplePages
     private let dotAppearance = UIPageControl.appearance()
     
+    
     var body: some View {
             TabView(selection: $pageIndex) {
                 ForEach(pages) { page in
                     VStack {
                         Spacer()
                         PageView(page: page)
-                        Spacer()
+                        Group{
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                            Spacer()
+                        }
                         if page == pages.last {
                             Button("Back to Start", action:
                                     goToZero)
-                                .buttonStyle(.bordered)
-                                .offset(x:0, y:-70)
+                            .buttonStyle(.bordered)
+                            .offset(x:0, y:-70)
                         } else {
+                            Group {
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                                Spacer()
+                            }
                             Button("next", action:
-                                incrementPage)
+                                    incrementPage)
                             .offset(x:0, y:-90)
                         }
+                        Spacer()
                     }
                     .tag(page.tag)
                 }
             }
             .animation(.easeInOut, value: pageIndex)
             .tabViewStyle(.page)
-            .indexViewStyle(.page(backgroundDisplayMode:
-                    .interactive))
             .onAppear {
                 dotAppearance.currentPageIndicatorTintColor
-                    = .black
+                = .black
                 dotAppearance.pageIndicatorTintColor = .gray
             }
-        
     }
     
     func incrementPage() {

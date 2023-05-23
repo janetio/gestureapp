@@ -19,6 +19,9 @@
 		57397C442A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */; };
 		5767B1832A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5767B1822A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel */; };
 		57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */; };
+		9D88C2212A1D3CC500F54B2C /* punch.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9D88C2202A1D3CC500F54B2C /* punch.mov */; };
+		9D88C2232A1D3CC900F54B2C /* updown.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9D88C2222A1D3CC900F54B2C /* updown.mov */; };
+		9D88C2252A1D3CCD00F54B2C /* wave.mov in Resources */ = {isa = PBXBuildFile; fileRef = 9D88C2242A1D3CCD00F54B2C /* wave.mov */; };
 		9D9F8D032A11A50800B797E6 /* tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D022A11A50800B797E6 /* tutorial.swift */; };
 		9D9F8D052A11A54600B797E6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D042A11A54600B797E6 /* PageView.swift */; };
 		9D9F8D072A11A55200B797E6 /* PageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D062A11A55200B797E6 /* PageModel.swift */; };
@@ -41,6 +44,9 @@
 		57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Projectmodel 2 copy 7 Iteration 20.mlmodel"; sourceTree = "<group>"; };
 		5767B1822A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 2 copy 5 Iteration 15.mlmodel"; sourceTree = "<group>"; };
 		57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 1.mlmodel"; sourceTree = "<group>"; };
+		9D88C2202A1D3CC500F54B2C /* punch.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = punch.mov; sourceTree = "<group>"; };
+		9D88C2222A1D3CC900F54B2C /* updown.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = updown.mov; sourceTree = "<group>"; };
+		9D88C2242A1D3CCD00F54B2C /* wave.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = wave.mov; sourceTree = "<group>"; };
 		9D9F8D022A11A50800B797E6 /* tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial.swift; sourceTree = "<group>"; };
 		9D9F8D042A11A54600B797E6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
 		9D9F8D062A11A55200B797E6 /* PageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageModel.swift; sourceTree = "<group>"; };
@@ -89,6 +95,9 @@
 				31ABE2B929F83448009457ED /* button.swift */,
 				31ABE28929F765EA009457ED /* Main.storyboard */,
 				31ABE28C29F765ED009457ED /* Assets.xcassets */,
+				9D88C2222A1D3CC900F54B2C /* updown.mov */,
+				9D88C2242A1D3CCD00F54B2C /* wave.mov */,
+				9D88C2202A1D3CC500F54B2C /* punch.mov */,
 				9D9F8D082A11A57200B797E6 /* test.mp3 */,
 				31ABE28E29F765ED009457ED /* LaunchScreen.storyboard */,
 				31ABE29129F765ED009457ED /* Info.plist */,
@@ -158,10 +167,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9D88C2212A1D3CC500F54B2C /* punch.mov in Resources */,
+				9D88C2252A1D3CCD00F54B2C /* wave.mov in Resources */,
 				31ABE29029F765ED009457ED /* LaunchScreen.storyboard in Resources */,
 				31ABE28D29F765ED009457ED /* Assets.xcassets in Resources */,
 				9D9F8D092A11A57200B797E6 /* test.mp3 in Resources */,
 				31ABE28B29F765EA009457ED /* Main.storyboard in Resources */,
+				9D88C2232A1D3CC900F54B2C /* updown.mov in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,7 +343,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X4ABZ53YK3;
+				DEVELOPMENT_TEAM = Z9PX99U2Q5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = record/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -345,7 +357,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = gallom.recordx;
+				PRODUCT_BUNDLE_IDENTIFIER = gallom.recordxas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -360,7 +372,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X4ABZ53YK3;
+				DEVELOPMENT_TEAM = Z9PX99U2Q5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = record/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
