@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     let synthesizer = AVSpeechSynthesizer()
     
-    var classifier = try? Projectmodel_2_copy_7_Iteration_20(configuration: MLModelConfiguration())
+    var classifier = try? MyActivityClassifier_2_copy_5_Iteration_15(configuration: MLModelConfiguration())
     
     let stateInLength = 400
     let predictionWindow = 100

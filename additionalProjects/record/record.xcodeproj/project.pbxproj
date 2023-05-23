@@ -17,6 +17,7 @@
 		57397C402A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */; };
 		57397C422A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C412A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel */; };
 		57397C442A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */; };
+		5767B1832A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 5767B1822A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel */; };
 		57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */; };
 		9D9F8D032A11A50800B797E6 /* tutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D022A11A50800B797E6 /* tutorial.swift */; };
 		9D9F8D052A11A54600B797E6 /* PageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D9F8D042A11A54600B797E6 /* PageView.swift */; };
@@ -38,6 +39,7 @@
 		57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "projectmodel 1 copy.mlmodel"; sourceTree = "<group>"; };
 		57397C412A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "projectmodel 2 copy 2.mlmodel"; sourceTree = "<group>"; };
 		57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "Projectmodel 2 copy 7 Iteration 20.mlmodel"; sourceTree = "<group>"; };
+		5767B1822A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 2 copy 5 Iteration 15.mlmodel"; sourceTree = "<group>"; };
 		57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "MyActivityClassifier 1.mlmodel"; sourceTree = "<group>"; };
 		9D9F8D022A11A50800B797E6 /* tutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = tutorial.swift; sourceTree = "<group>"; };
 		9D9F8D042A11A54600B797E6 /* PageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageView.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 				57C55EF02A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel */,
 				57397C3F2A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel */,
 				57397C432A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel */,
+				5767B1822A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel */,
 			);
 			path = record;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				57397C442A1BE44B0050C3CE /* Projectmodel 2 copy 7 Iteration 20.mlmodel in Sources */,
 				31ABE28429F765EA009457ED /* AppDelegate.swift in Sources */,
 				57C55EF12A0D71C300AB48B9 /* MyActivityClassifier 1.mlmodel in Sources */,
+				5767B1832A1D17CC00C57591 /* MyActivityClassifier 2 copy 5 Iteration 15.mlmodel in Sources */,
 				57397C402A1B2CF60050C3CE /* projectmodel 1 copy.mlmodel in Sources */,
 				57397C422A1B34BF0050C3CE /* projectmodel 2 copy 2.mlmodel in Sources */,
 				9D9F8D032A11A50800B797E6 /* tutorial.swift in Sources */,
