@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:/Users/gallom/Documents/CS(School)/Mobile Computing/Project/gestureapp/additionalProjects/record copy/record_tuemay23evening.xcodeproj">
+      location = "self:..">
    </FileRef>
 </Workspace>
