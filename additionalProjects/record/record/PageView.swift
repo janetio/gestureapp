@@ -15,7 +15,7 @@ struct PageView: View {
     @State var updown = AVPlayer(url:  Bundle.main.url(forResource: "updown", withExtension: "mov")!)
     var body: some View {
         VStack(spacing: 20) {
-            if page.tag <= 2 || page.tag >= 5 {
+            if page.tag <= 2 || page.tag == 5  {
                 Image("\(page.imageUrl)")
                     .resizable()
                     .scaledToFit()
