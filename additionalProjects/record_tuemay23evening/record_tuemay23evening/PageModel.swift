@@ -24,6 +24,7 @@ struct Page: Identifiable, Equatable {
     Page(name: "After performing gesture, corresponding sound will be made.", description: "There are 2 preprogrammed gestures (wave/updown). Any unrecognized gestures will be classified 'Other'. Each preprogrammed gesture will say what they are three times eg. wave wave wave for a wave.", imageUrl: "third", videoUrl: "",tag: 2),
     Page(name: "Wave Demo", description: "Please press on center of video to play", imageUrl: "", videoUrl: "wave",tag: 3),
     Page(name: "UpDown Demo", description: "Please press on center of video to play", imageUrl: "", videoUrl: "updown",tag: 4),
-    Page(name: "Editing Gestures", description: "To edit gestures, please press edit gestures button on home page, enter new sound to be made, and press save changes.", imageUrl: "four", videoUrl: "punch",tag: 5),
+    Page(name: "Editing Gestures", description: "To edit gestures, please press edit gestures button on home page, enter new sound to be made, and press save changes.", imageUrl: "four", videoUrl: "",tag: 5),
+    Page(name: "Debug mode", description: "Turn debug mode on to show probabilities as well as prediction.", imageUrl: "five", videoUrl: "",tag: 6),
     ]
 }
