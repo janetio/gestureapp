@@ -20,6 +20,11 @@ struct Gestures {
 
 class ViewController: UIViewController {
     
+    var debug = false
+    
+    let debugFontSize = 15.0
+    let fontSize = 46.0
+    
     let synthesizer = AVSpeechSynthesizer()
     
     var classifier = try? MyActivityClassifier_2_copy_2(configuration: MLModelConfiguration())
@@ -56,6 +61,10 @@ class ViewController: UIViewController {
     var count:Int = 1
     
     var motionManager = CMMotionManager()
+    
+    @IBOutlet weak var startGesture: UIButton!
+    
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +113,71 @@ class ViewController: UIViewController {
         let edit = EditGestures()
         let host = UIHostingController(rootView: edit)
         self.present(host, animated: true)
+        
+    }
+    
+    @IBAction func debugClicked(_ sender: UIButton) {
+        if debug {
+            debug = false
+            sender.setTitle("Debug: OFF", for: .normal)
+            console.font.withSize(fontSize)
+            console.font = UIFont(descriptor: console.font.fontDescriptor, size: fontSize)
+            
+        } else {
+            debug = true
+            sender.setTitle("Debug: ON", for: .normal)
+            console.font.withSize(debugFontSize)
+            console.font = UIFont(descriptor: console.font.fontDescriptor, size: debugFontSize)
+        }
+    }
+    
+    @IBAction func touchDown(sender: UIButton) {
+        
+        startRecording()
+        resetMotionArrays()
+        sender.setTitle("Gesturing!", for: .normal)
+        
+    }
+    
+    func exitedGestureButton(sender: UIButton){
+        stopRecording()
+        
+        let result = predict()
+        
+        if result[0] == "UpDown" {
+            speak(input: Gestures.upDown)
+        }
+        if result[0] == "Wave"
+        {
+            speak(input: Gestures.wave)
+        }
+        if result[0] == "Other" {
+            speak(input: "Other other other")
+        }
+        
+        console.text = result[0]!
+        if debug{
+            
+            console.text! += "\n\nProbabilities:\n" + result[1]!
+            
+        }
+        
+        //showSaveCsvFileAlert(fileName: String(count))
+        count = count + 1
+        
+        sender.setTitle("Hold during gesture", for: .normal)
+    }
+    
+    @IBAction func touchUpInside(sender: UIButton) {
+        
+        exitedGestureButton(sender: sender)
+        
+       
+        
+    }
+    
+    @IBAction func touchUpOutside(sender: UIButton) {
+        exitedGestureButton(sender: sender)
         
     }
     
@@ -214,7 +288,7 @@ class ViewController: UIViewController {
         
         if(length < predictionWindow){
             // Too short of a gesture
-            return ["Try doing the gesture for longer\n",""]
+            return ["Try doing the gesture for longer.\n",""]
         }
         
         //The math here could be better i think, but it works ('shares' the trimming from the front and back of the data
