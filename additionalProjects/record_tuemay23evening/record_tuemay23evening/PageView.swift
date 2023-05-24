@@ -15,7 +15,7 @@ struct PageView: View {
     @State var updown = AVPlayer(url:  Bundle.main.url(forResource: "updown", withExtension: "mov")!)
     var body: some View {
         VStack(spacing: 20) {
-            if page.tag <= 2 || page.tag == 5 {
+            if page.tag <= 2 {
                 Image("\(page.imageUrl)")
                     .resizable()
                     .scaledToFit()
@@ -30,12 +30,21 @@ struct PageView: View {
             if page.tag == 4 {
                 VideoPlayer(player: updown)
             }
+            if page.tag == 5 {
+                Spacer()
+                Image("\(page.imageUrl)")
+                    .resizable()
+                    .scaledToFit()
+                    .padding()
+                    .cornerRadius(30)
+                    .cornerRadius(10)
+                    .padding()
+            }
             Spacer()
             Spacer()
             Text(page.name)
                 .font(.title)
-            Spacer()
-            
+                .frame(width: 350)
             Text(page.description)
                 .font(.subheadline)
                 .frame(width: 300)
