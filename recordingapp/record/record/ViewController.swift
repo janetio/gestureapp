@@ -3,7 +3,9 @@
 //  record
 //
 //  Created by Grant Nakanishi on 4/24/23.
-//
+//This app was used to collect motion data and turn them into csv files to train classifier
+//credit to FollowTheDarkside/SensorDataRecorder github repository from which
+//much of the code was taken and modified from.
 
 import UIKit
 import CoreMotion
