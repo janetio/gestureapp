@@ -15,5 +15,5 @@ Model training data is in directory `train`
 App used to record CSV for data collection is in directory `recordingapp`
 
 # Report
-The report is 
+The report is accessible [here](https://docs.google.com/document/d/1f1xyVWH5haNOhuh7derKy3_e-nMNyzX3J722oJQmSlo/edit?usp=sharing).
 
